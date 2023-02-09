@@ -1,5 +1,6 @@
 .cardWrapper {
-  background-color: #0d131b;
+  background: linear-gradient(70deg, #0d131b, #040408);
+  /* background-color: #0d131b; */
   min-height: 30%;
   padding: 10px;
   color: white;
