@@ -1,0 +1,16 @@
+.container {
+  height: 100%;
+  width: 20%;
+  background-color: #17202d;
+  border-right: 0.5px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+  margin-top: 30px;
+  margin-left: 30px;
+}

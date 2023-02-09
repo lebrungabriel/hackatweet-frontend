@@ -1,0 +1,38 @@
+.container {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.userInfoWrapper {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatarIcon {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+
+.logoutButton {
+  padding: 10px 50px 10px 50px;
+  border: 0.5px solid white;
+  background-color: transparent;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.logoutButton:hover {
+  color: black;
+  background-color: white;
+  transition: ease-in 0.2s;
+}
