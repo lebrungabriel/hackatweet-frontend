@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/TweetSection.module.css";
-import InputTweet from "./InputTweet";
+import PublishedTweets from "./PublishedTweets";
 
 const TweetSection = () => {
   return (
@@ -10,12 +10,18 @@ const TweetSection = () => {
           Home
         </h1>
         <div className={styles.inputWrapper}>
-          <InputTweet />
+          <input
+            className={styles.inputTweet}
+            type="text"
+            placeholder="What's up?"
+          />
           <div className={styles.buttonWrapper}>
             <button className={styles.tweetButton}>Tweet</button>
           </div>
         </div>
       </div>
+
+      <PublishedTweets />
     </div>
   );
 };

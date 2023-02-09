@@ -1,7 +1,11 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import styles from "../styles/LogoutContainer.module.css";
 
 const LogoutContainer = () => {
+  const user = useSelector((state) => state.user.value);
+  console.log(user);
+
   return (
     <div className={styles.container}>
       <div className={styles.userInfoWrapper}>
