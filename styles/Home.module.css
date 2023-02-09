@@ -1,22 +1,105 @@
-.main {
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  height: 100vh;
+}
+
+.leftSide {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  grid-column: 1/6;
+  grid-row: 1/13;
+  background-color: #20b2e9;
   align-items: center;
-  min-height: 100vh;
-  padding: 4rem 0;
+  justify-content: center;
 }
 
-.title {
-  line-height: 1.15;
-  font-size: 4rem;
+.logoLeftSide {
+  height: 200px;
+  border-radius: 100px;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.rightSide {
+  display: grid;
+  grid-column: 6 / 13;
+  grid-row: 1/13;
+  background-color: #17202d;
 }
 
-.title a:hover, .title a:focus, .title a:active {
-  text-decoration: underline;
+.headerRightSide {
+  display: flex;
+  grid-column: 1 / 13;
+  grid-row: 1/2;
+}
+
+.logoRightSide {
+  height: 75px;
+  border-radius: 100px;
+  margin: 30px;
+}
+
+.containerRightSide {
+  display: flex;
+  grid-column: 1 / 13;
+  grid-row: 2/13;
+}
+
+.titleRightSide {
+  display: flex;
+  grid-column: 1 / 13;
+  grid-row: 2/4;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+.titleOne {
+  display: flex;
+  color: white;
+  font-size: 60px;
+  margin: 0;
+}
+
+.titleTwo {
+  display: flex;
+  color: white;
+  font-size: 20px;
+}
+
+.buttonsContainerRightSide {
+  display: flex;
+  grid-column: 1 / 13;
+  grid-row: 8/9;
+  flex-direction: column;
+  margin-left: 40px;
+  justify-content: space-between;
+}
+
+.buttonSignUp {
+  width: 150px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #20b2e9;
+  color: white;
+  font-weight: bold;
+}
+
+.buttonSignIn {
+  width: 150px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #17202d;
+  color: #20b2e9;
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: bold;
+}
+
+.paragrapheButtons {
+  color: white;
+}
+
+.tweet {
+  color: #20b2e9;
+  margin-right: 5px;
 }
