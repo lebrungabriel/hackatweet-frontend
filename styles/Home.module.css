@@ -73,7 +73,7 @@
 .buttonsContainerRightSide {
   display: flex;
   grid-column: 1 / 13;
-  grid-row: 8/9;
+  grid-row: 9/9;
   flex-direction: column;
   margin-left: 40px;
   justify-content: space-between;
@@ -86,18 +86,32 @@
   background-color: #20b2e9;
   color: white;
   font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.buttonSignUp:hover {
+  background-color: #3ac4f7;
+  transition: ease-in-out 0.2s;
 }
 
 .buttonSignIn {
   width: 150px;
   height: 40px;
   border-radius: 25px;
-  background-color: #17202d;
+  background-color: transparent;
   color: #20b2e9;
-  border-color: white;
+  border-color: #20b2e9;
   border-width: 1px;
   border-style: solid;
   font-weight: bold;
+  cursor: pointer;
+}
+
+.buttonSignIn:hover {
+  border-color: white;
+  color: white;
+  transition: ease-in-out 0.2s;
 }
 
 .paragrapheButtons {
@@ -123,8 +137,8 @@
   flex-direction: column;
   align-items: center;
   border-style: solid;
-  border-width: 5px;
-  border-color: #20b2e9;
+  /* border-width: 5px; */
+  /* border-color: #20b2e9; */
   z-index: 1;
   opacity: 1;
 }
@@ -139,6 +153,7 @@
 .popupTitle {
   font-size: 21px;
   font-weight: bold;
+  text-align: center;
   color: white;
   margin: 10px;
 }
@@ -146,12 +161,17 @@
 .closeButton {
   font-size: 18px;
   cursor: pointer;
+  width: 40px;
+  height: 40px;
   color: white;
   background-color: #17202d;
-  border-radius: 100px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: white;
+  border-radius: 100%;
+  border: 1px solid white;
+}
+
+.closeButton:hover {
+  scale: 1.1;
+  transition: ease-in-out 0.2s;
 }
 
 .popupBody {
@@ -182,7 +202,14 @@
   width: 150px;
   height: 40px;
   border-radius: 25px;
+  border: none;
   background-color: #20b2e9;
   color: white;
   font-weight: bold;
+  cursor: pointer;
+}
+
+.buttonSignUpInPopup:hover {
+  background-color: #3ac4f7;
+  transition: ease-in-out 0.2s;
 }

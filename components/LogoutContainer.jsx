@@ -1,10 +1,18 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useRouter } from "next/router";
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../reducers/user";
 import styles from "../styles/LogoutContainer.module.css";
 
 const LogoutContainer = () => {
+  let router = useRouter();
   const user = useSelector((state) => state.user.value);
-  console.log(user);
+  const dispatch = useDispatch();
+
+  const logoutHandler = () => {
+    dispatch(logout());
+    router.push("/");
+  };
 
   return (
     <div className={styles.container}>
@@ -14,9 +22,11 @@ const LogoutContainer = () => {
           alt="avatar-icon"
           className={styles.avatarIcon}
         />
-        <p style={{ color: "white" }}>@gabriel75</p>
+        <p style={{ color: "white" }}>@{user.username}</p>
       </div>
-      <button className={styles.logoutButton}>Logout</button>
+      <button className={styles.logoutButton} onClick={() => logoutHandler()}>
+        Logout
+      </button>
     </div>
   );
 };
