@@ -43,7 +43,13 @@ function Home() {
       .then((data) => {
         console.log(data);
         if (data.result) {
-          dispatch(login({ username: signUpUsername, token: data.token }));
+          dispatch(
+            login({
+              username: signUpUsername,
+              token: data.token,
+              email: data.email,
+            })
+          );
           router.push("/tweet");
         }
       });
@@ -60,9 +66,17 @@ function Home() {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        console.log(
+          "LOGIN DATA RETOUR FETCH : " + JSON.parse(JSON.stringify(data))
+        );
         if (data.result) {
-          dispatch(login({ username: data.username, token: data.token }));
+          dispatch(
+            login({
+              username: data.username,
+              token: data.token,
+              email: data.email,
+            })
+          );
           router.push("/tweet/");
         }
       });
@@ -80,7 +94,7 @@ function Home() {
           <div className={styles.popupHeader}>
             <img
               className={styles.logoPopup}
-              src='https://resize.programme-television.ladmedia.fr/r/670,670/img/var/premiere/storage/images/tele-7-jours/news-tv/les-tweets-du-jour-4012594/74013416-2-fre-FR/Les-tweets-du-jour.png'
+              src="https://resize.programme-television.ladmedia.fr/r/670,670/img/var/premiere/storage/images/tele-7-jours/news-tv/les-tweets-du-jour-4012594/74013416-2-fre-FR/Les-tweets-du-jour.png"
             />
             <h3 className={styles.popupTitle}>
               Connect to Hacka<span className={styles.tweet2}>Tweet</span>
@@ -94,15 +108,15 @@ function Home() {
           </div>
           <div className={styles.popupBody}>
             <input
-              type='text'
-              placeholder='Email'
+              type="text"
+              placeholder="Email"
               className={styles.inputPopup}
               onChange={(e) => setSignInEmail(e.target.value)}
               value={signInEmail}
             />
             <input
-              type='password'
-              placeholder='Password'
+              type="password"
+              placeholder="Password"
               className={styles.inputPopup}
               onChange={(e) => setSignInPassword(e.target.value)}
               value={signInPassword}
@@ -122,7 +136,7 @@ function Home() {
           <div className={styles.popupHeader}>
             <img
               className={styles.logoPopup}
-              src='https://resize.programme-television.ladmedia.fr/r/670,670/img/var/premiere/storage/images/tele-7-jours/news-tv/les-tweets-du-jour-4012594/74013416-2-fre-FR/Les-tweets-du-jour.png'
+              src="https://resize.programme-television.ladmedia.fr/r/670,670/img/var/premiere/storage/images/tele-7-jours/news-tv/les-tweets-du-jour-4012594/74013416-2-fre-FR/Les-tweets-du-jour.png"
             />
             <h3 className={styles.popupTitle}>
               Create your Hacka<span className={styles.tweet}>Tweet</span>{" "}
@@ -137,22 +151,22 @@ function Home() {
           </div>
           <div className={styles.popupBody}>
             <input
-              type='text'
-              placeholder='Username'
+              type="text"
+              placeholder="Username"
               className={styles.inputPopup}
               onChange={(e) => setSignUpUsername(e.target.value)}
               value={signUpUsername}
             />
             <input
-              type='text'
-              placeholder='Email'
+              type="text"
+              placeholder="Email"
               className={styles.inputPopup}
               onChange={(e) => setSignUpEmail(e.target.value)}
               value={signUpEmail}
             />
             <input
-              type='password'
-              placeholder='Password'
+              type="password"
+              placeholder="Password"
               className={styles.inputPopup}
               onChange={(e) => setSignUpPassword(e.target.value)}
               value={signUpPassword}
@@ -172,14 +186,14 @@ function Home() {
           <div className={styles.leftSide}>
             <img
               className={styles.logoLeftSide}
-              src='https://resize.programme-television.ladmedia.fr/r/670,670/img/var/premiere/storage/images/tele-7-jours/news-tv/les-tweets-du-jour-4012594/74013416-2-fre-FR/Les-tweets-du-jour.png'
+              src="https://resize.programme-television.ladmedia.fr/r/670,670/img/var/premiere/storage/images/tele-7-jours/news-tv/les-tweets-du-jour-4012594/74013416-2-fre-FR/Les-tweets-du-jour.png"
             />
           </div>
           <div className={styles.rightSide}>
             <div className={styles.headerRightSide}>
               <img
                 className={styles.logoRightSide}
-                src='https://resize.programme-television.ladmedia.fr/r/670,670/img/var/premiere/storage/images/tele-7-jours/news-tv/les-tweets-du-jour-4012594/74013416-2-fre-FR/Les-tweets-du-jour.png'
+                src="https://resize.programme-television.ladmedia.fr/r/670,670/img/var/premiere/storage/images/tele-7-jours/news-tv/les-tweets-du-jour-4012594/74013416-2-fre-FR/Les-tweets-du-jour.png"
               />
             </div>
             <div className={styles.containerRightSide}>

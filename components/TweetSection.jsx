@@ -22,13 +22,11 @@ const TweetSection = () => {
       .then((response) => response.json())
       .then((data) => {
         if (data) {
-          dispatch(addTweetToStore(inputTweet));
+          dispatch(addTweetToStore(JSON.parse(JSON.stringify(data.tweet))));
           setInputTweet("");
         }
       });
   };
-
-  console.log("Voici les tweet dans le store : " + tweet);
 
   return (
     <div className={styles.container}>
