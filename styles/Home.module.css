@@ -132,7 +132,7 @@
   padding: 20px;
   border-radius: 25px;
   width: 500px;
-  height: 500px;
+  height: 430px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -148,6 +148,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  justify-content: space-between;
 }
 
 .popupTitle {
@@ -156,6 +157,7 @@
   text-align: center;
   color: white;
   margin: 10px;
+  justify-content: space-between;
 }
 
 .closeButton {
@@ -210,6 +212,43 @@
 }
 
 .buttonSignUpInPopup:hover {
+  background-color: #3ac4f7;
+  transition: ease-in-out 0.2s;
+}
+
+.popupContainer2 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #20b2e9;
+  padding: 20px;
+  border-radius: 25px;
+  width: 500px;
+  height: 430px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-style: solid;
+  /* border-width: 5px; */
+  /* border-color: #20b2e9; */
+  z-index: 1;
+  opacity: 1;
+}
+
+.buttonSignInInPopup {
+  margin-top: 60px;
+  width: 150px;
+  height: 40px;
+  border-radius: 25px;
+  border: solid, 1px, black;
+  background-color: #17202d;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.buttonSignInInPopup:hover {
   background-color: #3ac4f7;
   transition: ease-in-out 0.2s;
 }
