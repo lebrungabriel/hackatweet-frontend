@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import tweet from "../reducers/tweet";
 import React from "react";
 import Card from "./Card";
 import styles from "../styles/PublishedTweets.module.css";
 
 const PublishedTweets = () => {
   const [tweetData, setTweetData] = useState([]);
+  const tweet = useSelector((state) => state.tweet.value);
 
   useEffect(() => {
     fetch("http://localhost:3000/tweets")
@@ -12,9 +15,8 @@ const PublishedTweets = () => {
       .then((data) => {
         setTweetData(data.tweets);
       });
-  }, []);
+  }, [tweet]);
 
-  console.log(tweetData);
   return (
     <div className={styles.container}>
       {tweetData.map((data, i) => (

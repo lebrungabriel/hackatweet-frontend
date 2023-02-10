@@ -1,15 +1,18 @@
-.cardWrapper {
+.card {
   background: linear-gradient(70deg, #0d131b, #040408);
   /* background-color: #0d131b; */
-  min-height: 30%;
+  min-height: 150px;
   padding: 10px;
   color: white;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   border-radius: 5px;
   margin-bottom: 10px;
+}
+
+.tweetWrapper {
+  width: 80%;
 }
 
 .userInfos {
@@ -26,4 +29,13 @@
 
 .tweet {
   width: 90%;
+}
+
+.iconsWrapper {
+  min-height: 100px;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
 }
